@@ -129,13 +129,19 @@
 //функцию, которая считает и логирует количество своих вызовов
 //++++++++++++++++++++++++++++++++++++++++++
 
-function makeCounter() {
-}
+// function makeCounter() {
+//     let total = 0;
+//     const calc = () => {
+//         total += 1;
+//         console.log(total);
+//     };
+//     return calc;
+// };
 
 // const counter = makeCounter()
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
+// counter();
+// counter();
+// counter();
 
 //====================================================
 //====================================================
