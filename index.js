@@ -71,10 +71,11 @@
 //====================================================
 
 // 4. Исправьте ошибки, чтобы код работал
+
 // const product = {
 //   price: 5000,
 //   showPrice() {
-//     console.log(price);
+//     console.log(this.price);
 //   },
 // };
 // product.showPrice();
@@ -83,9 +84,10 @@
 //====================================================
 
 // 5. Исправьте чтобы код работал
-function callAction(action) {
-    action()
-}
+
+// function callAction(action) {
+//     action()
+// }
 
 // const item = {
 //     getQuantity() {
@@ -94,7 +96,7 @@ function callAction(action) {
 //     quantity: 5,
 // }
 
-// callAction(item.getQuantity);
+// callAction(item.getQuantity.bind(item));
 
 //====================================================
 //====================================================
@@ -106,11 +108,19 @@ function callAction(action) {
 //которого будут результаты вызова callback
 //callback функция должна умножать элементы на 2
 //++++++++++++++++++++++++++++++++++++++++++
-function each(array, callback) {
-}
+
+// function each(array, callback) {
+//     return array.map(element => callback(element))
+    
+// }
+
+// function multiple(element) {
+//     return element * 2;
+// }
+
 
 // const array = [3, 5, 6, 34, 8, 83, 12, 34];
-// console.log(each(array, doubleValues));
+// console.log(each(array, multiple));
 
 //====================================================
 //====================================================
