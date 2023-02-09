@@ -172,7 +172,13 @@
 //и возвращает финальную сумму с сохраненной скидкой.
 //++++++++++++++++++++++++++++++++++++++++++
 
-function makeDiscount(discount) {}
+// function makeDiscount(discount) {
+//     const sum = (price) => console.log(price - price * discount);
+//     return sum;
+// };
+
+// const discount10 = makeDiscount(0.1);
+// discount10(1000);
 
 //====================================================
 //====================================================
