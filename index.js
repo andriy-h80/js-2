@@ -54,8 +54,18 @@
 //Функция makeDish должна логировать "<shef> is cooking <dish>"
 //++++++++++++++++++++++++++++++++++++++++++
 
-const makeShef = function (shefName) {
-}
+// const makeShef = function (shefName) {
+//     const makeDish = dish => {
+//         console.log(`${shefName} is cooking ${dish}`);
+//     }
+//     return makeDish;
+// };
+
+// const shef1 = makeShef('Andrii');
+// const shef2 = makeShef('Natalia');
+
+// shef2('Pasta');
+// shef1('Rizotto');
 
 //====================================================
 //====================================================
