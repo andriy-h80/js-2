@@ -6,15 +6,15 @@
 // Реализуй проверку, что prompt не пустой
 // ++++++++++++++++++++++++++++++++++++++++++
 
-function letMeSeeYourName(callback) {
-    const name = prompt('What is your name?');
-    callback(name);
-}
-function greet(name) {
-    console.log(`Привет ${name}`);
-}
+// function letMeSeeYourName(callback) {
+//     const name = prompt('What is your name?');
+//     callback(name);
+// }
+// function greet(name) {
+//     console.log(`Привет ${name}`);
+// }
 
-letMeSeeYourName(greet);
+// letMeSeeYourName(greet);
 
 //====================================================
 //====================================================
@@ -29,8 +29,22 @@ letMeSeeYourName(greet);
 //продукта и логирующий его в консоль
 //++++++++++++++++++++++++++++++++++++++++++
 
-function makeProduct(name, price, callback) {
-}
+// function makeProduct(name, price, callback) {
+//     const product = {
+//         name,
+//         price,
+//         id: Math.random()
+//     }
+
+//     callback(product);
+
+// }
+
+// function showProduct(product) {
+//     console.log(product);
+// }
+
+// makeProduct('apple', 100, showProduct);
 
 //====================================================
 //====================================================
