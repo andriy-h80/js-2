@@ -190,9 +190,23 @@
 //d. класс ожидает 1 параметр - объект настроек с одноименными свойствами
 
 //Добавь метод getInfo(), который возвращает строку:
-//`Пользователю ${} ${} лет и у него ${} публикаций.`
+//`Пользователю ${} ${} лет и у неe ${} публикаций.`
 
-const User = function (userObj) {}
+// const User = function (obj) { 
+//     const { userName, age, numbersOfPost } = obj;
+//     this.userName = userName;
+//     this.age = age;
+//     this.numbersOfPost = numbersOfPost;
+// }
+
+// User.prototype.getInfo = function () {
+//     console.log(
+//         `Пользователю ${this.userName} ${this.age} лет и у неe ${this.numbersOfPost} публикаций.`
+//     );
+// }
+
+// const mango = new User({ userName: 'Natalia', age: 18, numbersOfPost: 987 });
+// mango.getInfo();
 
 //====================================================
 //====================================================
