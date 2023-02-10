@@ -111,13 +111,12 @@
 
 // function each(array, callback) {
 //     return array.map(element => callback(element))
-    
+
 // }
 
 // function multiple(element) {
 //     return element * 2;
 // }
-
 
 // const array = [3, 5, 6, 34, 8, 83, 12, 34];
 // console.log(each(array, multiple));
@@ -129,13 +128,19 @@
 //функцию, которая считает и логирует количество своих вызовов
 //++++++++++++++++++++++++++++++++++++++++++
 
-function makeCounter() {
-}
+// function makeCounter() {
+//     let total = 0;
+//     const calc = () => {
+//         total += 1;
+//         console.log(total);
+//     };
+//     return calc;
+// };
 
 // const counter = makeCounter()
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
+// counter();
+// counter();
+// counter();
 
 //====================================================
 //====================================================
@@ -146,8 +151,18 @@ function makeCounter() {
 //паролем и false - если не совпадает
 //++++++++++++++++++++++++++++++++++++++++++
 
-const savePassword = (password) => {
-}
+// const savePassword = (password) => {
+//     const checkPassword = (newPassword) => console.log(newPassword === password);
+//     return checkPassword;
+// };
+
+// const password1 = savePassword('qwe123');
+
+// password1('qwerty');
+// password1('qwe123');
+
+// console.log(savePassword('qwe123')('qwerty'));
+// console.log(savePassword('qwe123')('qwe123'));
 
 //====================================================
 //====================================================
@@ -157,8 +172,13 @@ const savePassword = (password) => {
 //и возвращает финальную сумму с сохраненной скидкой.
 //++++++++++++++++++++++++++++++++++++++++++
 
-function makeDiscount(discount) {
-}
+// function makeDiscount(discount) {
+//     const sum = (price) => console.log(price - price * discount);
+//     return sum;
+// };
+
+// const discount10 = makeDiscount(0.1);
+// discount10(1000);
 
 //====================================================
 //====================================================
@@ -170,10 +190,23 @@ function makeDiscount(discount) {
 //d. класс ожидает 1 параметр - объект настроек с одноименными свойствами
 
 //Добавь метод getInfo(), который возвращает строку:
-//`Пользователю ${} ${} лет и у него ${} публикаций.`
+//`Пользователю ${} ${} лет и у неe ${} публикаций.`
 
-const User = function (userObj) {
-}
+// const User = function (obj) { 
+//     const { userName, age, numbersOfPost } = obj;
+//     this.userName = userName;
+//     this.age = age;
+//     this.numbersOfPost = numbersOfPost;
+// }
+
+// User.prototype.getInfo = function () {
+//     console.log(
+//         `Пользователю ${this.userName} ${this.age} лет и у неe ${this.numbersOfPost} публикаций.`
+//     );
+// }
+
+// const mango = new User({ userName: 'Natalia', age: 18, numbersOfPost: 987 });
+// mango.getInfo();
 
 //====================================================
 //====================================================
@@ -197,12 +230,10 @@ const User = function (userObj) {
 //доступ к которым сделай через геттер и сеттер login email
 //++++++++++++++++++++++++++++++++++++++++++
 
-class Client {
-}
+class Client {}
 
 //====================================================
 //====================================================
-
 
 // 12. Напиши класс Notes который управляет коллекцией заметок в
 //свойстве items.
@@ -213,14 +244,12 @@ class Client {
 //updatePriority(text, newPriority)
 //+++++++++++++++++++++++++++++++++++++++++++
 
-class Notes {
-}
+class Notes {}
 
 //====================================================
 //====================================================
 
-
-// 13. 
+// 13.
 // Создай класс для калькулятора, который имеет следующие методы:
 // метод number, который принимает начальное значение для последующих операций
 // геттер, который возвращает финальный результат всех операций, проведенных с числом
@@ -228,8 +257,7 @@ class Notes {
 // объект класса может проводить последовательные операции в виде цепочки
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-class Calculator {
-}
+class Calculator {}
 
 // const calculator = new Calculator();
 // const res = calculator
@@ -251,7 +279,6 @@ class Calculator {
 // .result;
 
 // console.log(res2) // 21
-
 
 //====================================================
 //====================================================
@@ -277,13 +304,10 @@ const workerObj = {
 
 //ES5
 
-const Worker = function (obj = {}) {
-}
-
+const Worker = function (obj = {}) {}
 
 //++++++++++++++++++++++++++++++++++++++
 
 //ES6
 
-class WorkerES6 {
-}
+class WorkerES6 {}
