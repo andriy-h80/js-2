@@ -313,12 +313,33 @@ class Calculator {}
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (подивіться на елементи розмітки в html файлі)
 */
 
-const alertButtonEl = document.querySelector('#alertButton');
-const alertInputEl = document.querySelector('#alertInput')
+// const alertButtonEl = document.querySelector('#alertButton');
+// const alertInputEl = document.querySelector('#alertInput')
 
-alertButtonEl.addEventListener('click', onButtonClick)
+// alertButtonEl.addEventListener('click', onButtonClick)
 
-function onButtonClick() {
-    alert(alertInputEl.value);
-}
+// function onButtonClick() {
+//     alert(alertInputEl.value);
+// }
 
+// Задача 2
+// При натисканні на кнопку "SWAP ME" виконується обмін змісту між двома інпутами. 
+// Можна нажимати на неї декілька разів або вручну змінити вміст інпутів. * /
+
+
+// const swapButton = document.querySelector(`#swapButton`);
+
+// const inputElOne = document.querySelector("[data-type = 'left']");
+// const inputElTwo = document.querySelector("[data-type = 'right']");
+
+// swapButton.addEventListener('click', onButtonClick)
+
+
+// function onButtonClick() {
+//     const value = inputElOne.value;
+//     inputElOne.value = inputElTwo.value;
+//     inputElTwo.value = value;
+
+// }
+
+// console.log(inputElOne.dataset.type)
