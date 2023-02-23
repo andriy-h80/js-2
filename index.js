@@ -348,17 +348,44 @@ class Calculator {}
 "Show", при повторному натисканні текст знову стає доступний (замість зірочок - літери) і кнопка приймає початковий вигляд.
 */
 
-const inputRef = document.querySelector('[data-target="passwordInput"]')
-const buttonRef = document.querySelector('#passwordButton')
+// const inputRef = document.querySelector('[data-target="passwordInput"]')
+// const buttonRef = document.querySelector('#passwordButton')
 
-buttonRef.addEventListener('click', onButtonClick)
+// buttonRef.addEventListener('click', onButtonClick)
 
-function onButtonClick(event) {
-    if (inputRef.type === 'password') {
-        inputRef.type = 'text'
-        buttonRef.textContent = 'hide'
-    } else {
-        inputRef.type = 'password'
-        buttonRef.textContent = 'show'
-    }
-}
+// function onButtonClick(event) {
+//     if (inputRef.type === 'password') {
+//         inputRef.type = 'text'
+//         buttonRef.textContent = 'hide'
+//     } else {
+//         inputRef.type = 'password'
+//         buttonRef.textContent = 'show'
+//     }
+// }
+
+
+
+/*
+Задача 4
+Кнопка "Decrease" робить квадрат меньше на 10 пікселів, кпопка "Increase" - більше на 10 пикселів.
+*/
+
+// const boxRef = document.querySelector('#box');
+
+// const buttonDecRef = document.querySelector('[data-type="decrease"]');
+// const buttonIncRef = document.querySelector('[data-type="increase"]');
+
+// buttonDecRef.addEventListener('click', onButtonDecClick);
+// buttonIncRef.addEventListener('click', onButtonIncClick);
+
+// function onButtonDecClick(event) {
+//     // console.log(boxRef.offsetWidth);
+//     boxRef.style.width =`${boxRef.offsetWidth - 10}px`;
+//     boxRef.style.height =`${boxRef.offsetHeight - 10}px`;
+// };
+
+// function onButtonIncClick(event) {
+//     boxRef.style.width =`${boxRef.offsetWidth + 10}px`;
+//     boxRef.style.height =`${boxRef.offsetHeight + 10}px`; 
+// };
+
