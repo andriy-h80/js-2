@@ -389,3 +389,19 @@ class Calculator {}
 //     boxRef.style.height =`${boxRef.offsetHeight + 10}px`; 
 // };
 
+
+// Задача 5
+// Додайте слухача по кліку та визначте, коли клік відбувається
+// в середині елемента з id "place" і коли клік відбувається поза зоною елемента
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
+
+const placeEl = document.querySelector('#place');
+
+document.addEventListener('click', event => {
+    if (placeEl.contains(event.target)) {
+        console.log('Бінго!!!!!!!!!')
+    } else {
+        console.log('Мимо :(')
+    }
+});
+
