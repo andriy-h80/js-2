@@ -192,7 +192,7 @@
 //Добавь метод getInfo(), который возвращает строку:
 //`Пользователю ${} ${} лет и у неe ${} публикаций.`
 
-// const User = function (obj) { 
+// const User = function (obj) {
 //     const { userName, age, numbersOfPost } = obj;
 //     this.userName = userName;
 //     this.age = age;
@@ -323,9 +323,8 @@ class Calculator {}
 // }
 
 // Задача 2
-// При натисканні на кнопку "SWAP ME" виконується обмін змісту між двома інпутами. 
+// При натисканні на кнопку "SWAP ME" виконується обмін змісту між двома інпутами.
 // Можна нажимати на неї декілька разів або вручну змінити вміст інпутів. * /
-
 
 // const swapButton = document.querySelector(`#swapButton`);
 
@@ -333,7 +332,6 @@ class Calculator {}
 // const inputElTwo = document.querySelector("[data-type = 'right']");
 
 // swapButton.addEventListener('click', onButtonClick)
-
 
 // function onButtonClick() {
 //     const value = inputElOne.value;
@@ -343,3 +341,24 @@ class Calculator {}
 // }
 
 // console.log(inputElOne.dataset.type)
+
+/*
+Задача 3
+Кнопка "Hide" ховає текст (замість літер - зірочки) і заміняє назву кнопки на
+"Show", при повторному натисканні текст знову стає доступний (замість зірочок - літери) і кнопка приймає початковий вигляд.
+*/
+
+const inputRef = document.querySelector('[data-target="passwordInput"]')
+const buttonRef = document.querySelector('#passwordButton')
+
+buttonRef.addEventListener('click', onButtonClick)
+
+function onButtonClick(event) {
+    if (inputRef.type === 'password') {
+        inputRef.type = 'text'
+        buttonRef.textContent = 'hide'
+    } else {
+        inputRef.type = 'password'
+        buttonRef.textContent = 'show'
+    }
+}
