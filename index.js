@@ -289,25 +289,36 @@ class Calculator {}
 //и который наследует класс Worker, добавляя метод getHierarchyLevel
 //Реализовать задачу с помощью ES5 прототипов и ES6 классов
 
-const HIERARCHY_LEVEL = {
-    TOP: 'top',
-    REGULAR: 'regular',
-}
+// const HIERARCHY_LEVEL = {
+//     TOP: 'top',
+//     REGULAR: 'regular',
+// }
 
-const workerObj = {
-    name: 'Mango',
-    surname: 'Worker',
-    age: 30,
-    position: 'FE developer',
-    salary: 5000,
-}
+// const workerObj = {
+//     name: 'Mango',
+//     surname: 'Worker',
+//     age: 30,
+//     position: 'FE developer',
+//     salary: 5000,
+// }
 
 //ES5
 
-const Worker = function (obj = {}) {}
+// const Worker = function (obj = {}) {}
 
 //++++++++++++++++++++++++++++++++++++++
 
-//ES6
+/*
+Задача 1
+Натискання на кнопку "SHOW ME" має виводити значення з поля введення (подивіться на елементи розмітки в html файлі)
+*/
 
-class WorkerES6 {}
+const alertButtonEl = document.querySelector('#alertButton');
+const alertInputEl = document.querySelector('#alertInput')
+
+alertButtonEl.addEventListener('click', onButtonClick)
+
+function onButtonClick() {
+    alert(alertInputEl.value);
+}
+
