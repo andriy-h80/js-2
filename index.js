@@ -386,7 +386,7 @@ class Calculator {}
 
 // function onButtonIncClick(event) {
 //     boxRef.style.width =`${boxRef.offsetWidth + 10}px`;
-//     boxRef.style.height =`${boxRef.offsetHeight + 10}px`; 
+//     boxRef.style.height =`${boxRef.offsetHeight + 10}px`;
 // };
 
 
@@ -395,13 +395,29 @@ class Calculator {}
 // в середині елемента з id "place" і коли клік відбувається поза зоною елемента
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 
-const placeEl = document.querySelector('#place');
+// const placeEl = document.querySelector('#place');
 
-document.addEventListener('click', event => {
-    if (placeEl.contains(event.target)) {
-        console.log('Бінго!!!!!!!!!')
-    } else {
-        console.log('Мимо :(')
-    }
-});
+// document.addEventListener('click', event => {
+//     if (placeEl.contains(event.target)) {
+//         console.log('Бінго!!!!!!!!!')
+//     } else {
+//         console.log('Мимо :(')
+//     }
+// });
 
+/*
+Задача 6
+По кліку на кнопку "Double" збільшіть значення
+в кожному елементі списку у 2 рази
+*/
+
+// const doubleButton = document.querySelector('#double');
+// const listEl = document.querySelectorAll('.listItem')
+
+// doubleButton.addEventListener('click', onDoubleButtonClick)
+
+
+// function onDoubleButtonClick() {
+    
+//     listEl.forEach(element => element.textContent *= 2)
+// }
