@@ -363,8 +363,6 @@ class Calculator {}
 //     }
 // }
 
-
-
 /*
 Задача 4
 Кнопка "Decrease" робить квадрат меньше на 10 пікселів, кпопка "Increase" - більше на 10 пикселів.
@@ -388,7 +386,6 @@ class Calculator {}
 //     boxRef.style.width =`${boxRef.offsetWidth + 10}px`;
 //     boxRef.style.height =`${boxRef.offsetHeight + 10}px`;
 // };
-
 
 // Задача 5
 // Додайте слухача по кліку та визначте, коли клік відбувається
@@ -416,15 +413,10 @@ class Calculator {}
 
 // doubleButton.addEventListener('click', onDoubleButtonClick)
 
-
 // function onDoubleButtonClick() {
-    
+
 //     listEl.forEach(element => element.textContent *= 2)
 // }
-
-
-
-
 
 /**
  * ЗАДАЧА 8
@@ -436,48 +428,77 @@ class Calculator {}
  * Список з задачами має бути доступним післе перезавантаження сторінки.
  */
 
-const taskForm = document.querySelector('#task-form');
-const taskList = document.querySelector('#task-list');
+const taskForm = document.querySelector('#task-form')
+const taskList = document.querySelector('#task-list')
+const addButton = taskForm.querySelector('[type="submit"]')
 
-taskForm.addEventListener('submit', onButtonClick);
-taskList.addEventListener('click', onDeleteClick);
+taskForm.addEventListener('submit', onButtonClick)
+taskList.addEventListener('click', onDeleteClick)
+taskForm.addEventListener('input', onFormInput)
 
-const arrayTask = [];
+
+const arrayTask = []
+
+function onFormInput(e) {
+    if (!e.target.value.trim()) {
+        addButton.disabled = true;
+} else {addButton.disabled = false}
+}
 
 function onButtonClick(event) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const taskText = event.target.elements.taskName.value;
+    const taskText = event.target.elements.taskName.value
     // console.log(taskText);
 
-    const id = Date.now();
+    const id = Date.now()
 
-    taskList.insertAdjacentHTML('beforeend', `<li data-id='${id}' class='list__item'><p>${taskText}</p><button type='button'>DELETE</button></li>`);
+    taskList.insertAdjacentHTML(
+        'beforeend',
+        `<li data-id='${id}' class='list__item'><p>${taskText}</p><button type='button'>DELETE</button></li>`
+    )
 
-    arrayTask.push({id, taskText});
+    arrayTask.push({ id, taskText })
 
-    localStorage.setItem('listName', JSON.stringify(arrayTask));
+    localStorage.setItem('listName', JSON.stringify(arrayTask))
 
-    event.target.reset();
-};
-
-
+    event.target.reset()
+}
 
 function onDeleteClick(event) {
-    if(event.target.nodeName !== 'BUTTON') {
-        return;
-    } 
+    if (event.target.nodeName !== 'BUTTON') {
+        return
+    }
 
-const id = event.target.closest('li').dataset.id;
+    const id = event.target.closest('li').dataset.id
 
-event.target.closest('li').remove();
+    event.target.closest('li').remove()
 
-const parsedDataFromLS = JSON.parse(localStorage.getItem('listName'));
+    const parsedDataFromLS = JSON.parse(localStorage.getItem('listName'))
 
-const filteredData = parsedDataFromLS.filter(element => element.id !== Number(id));
+    const filteredData = parsedDataFromLS.filter(
+        (element) => element.id !== Number(id)
+    )
 
-localStorage.setItem('listName', JSON.stringify(filteredData));
+    localStorage.setItem('listName', JSON.stringify(filteredData))
 
-console.log(parsedDataFromLS);
-};
+    console.log(parsedDataFromLS)
+}
 
+function initListTasks() {
+    addButton.disabled = true;
+    
+    try {
+        const parsedDataFromLS = JSON.parse(localStorage.getItem('listName'))
+        parsedDataFromLS.forEach((element) =>
+            taskList.insertAdjacentHTML(
+                'beforeend',
+                `<li data-id='${element.id}' class='list__item'><p>${element.taskText}</p><button type='button'>DELETE</button></li>`
+            )
+        )
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
+initListTasks()
