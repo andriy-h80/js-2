@@ -436,13 +436,14 @@ taskForm.addEventListener('submit', onButtonClick)
 taskList.addEventListener('click', onDeleteClick)
 taskForm.addEventListener('input', onFormInput)
 
-
 const arrayTask = []
 
 function onFormInput(e) {
     if (!e.target.value.trim()) {
-        addButton.disabled = true;
-} else {addButton.disabled = false}
+        addButton.disabled = true
+    } else {
+        addButton.disabled = false
+    }
 }
 
 function onButtonClick(event) {
@@ -486,8 +487,9 @@ function onDeleteClick(event) {
 }
 
 function initListTasks() {
-    addButton.disabled = true;
-    
+    addButton.disabled = true
+
+    console.log(addButton.disabled);
     try {
         const parsedDataFromLS = JSON.parse(localStorage.getItem('listName'))
         parsedDataFromLS.forEach((element) =>
