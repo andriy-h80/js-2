@@ -421,3 +421,63 @@ class Calculator {}
     
 //     listEl.forEach(element => element.textContent *= 2)
 // }
+
+
+
+
+
+/**
+ * ЗАДАЧА 8
+ * Створи перелік справ.
+ * Є  інпут, в який вноситься зміст задачі.
+ * При натисканні на кнопку "Додати" задача додається в список #list.
+ * Поруч з кожною задачею знаходится кнопка "Видалити", щоб можна було
+ * видалити цю задачу із списку.
+ * Список з задачами має бути доступним післе перезавантаження сторінки.
+ */
+
+const taskForm = document.querySelector('#task-form');
+const taskList = document.querySelector('#task-list');
+
+taskForm.addEventListener('submit', onButtonClick);
+taskList.addEventListener('click', onDeleteClick);
+
+const arrayTask = [];
+
+function onButtonClick(event) {
+    event.preventDefault();
+
+    const taskText = event.target.elements.taskName.value;
+    // console.log(taskText);
+
+    const id = Date.now();
+
+    taskList.insertAdjacentHTML('beforeend', `<li data-id='${id}' class='list__item'><p>${taskText}</p><button type='button'>DELETE</button></li>`);
+
+    arrayTask.push({id, taskText});
+
+    localStorage.setItem('listName', JSON.stringify(arrayTask));
+
+    event.target.reset();
+};
+
+
+
+function onDeleteClick(event) {
+    if(event.target.nodeName !== 'BUTTON') {
+        return;
+    } 
+
+const id = event.target.closest('li').dataset.id;
+
+event.target.closest('li').remove();
+
+const parsedDataFromLS = JSON.parse(localStorage.getItem('listName'));
+
+const filteredData = parsedDataFromLS.filter(element => element.id !== Number(id));
+
+localStorage.setItem('listName', JSON.stringify(filteredData));
+
+console.log(parsedDataFromLS);
+};
+

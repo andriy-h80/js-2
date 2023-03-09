@@ -94,3 +94,8 @@ div {
     padding: 0;
     list-style: none;
 }
+
+.list__item{
+    display: flex;
+    gap: 80px;
+}
