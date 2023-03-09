@@ -95,8 +95,66 @@ div {
     list-style: none;
 }
 
-.list__item{
-    display: flex;
-    gap: 80px;
+
+#task-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#task-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#task-form button[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#task-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+#task-list li:last-child {
+  border-bottom: none;
+}
+
+#task-list li .delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#task-list li .delete-button:hover {
+  background-color: #d32f2f;
 }
 
