@@ -7,3 +7,7 @@ export function getAllProducts() {
 export function getProductById(id) {
     return instance.get(`products/${id}`);
 };
+
+export function productAdd(title) {
+    return instance.post('products/add', {title});
+};

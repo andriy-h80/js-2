@@ -8,3 +8,7 @@ export function createProductListMarkup(products) {
 export function createProductMarkup(product) {
     return `<img src="${product.images[2]}" alt="${product.title}"><p>${product.title}</p><p>Price: ${product.price}</p>`;
 }
+
+export function createNewProductMarkup(product) {
+    return `<h2>Ви додали новий продукт: ${product.title}</h2>`;
+}

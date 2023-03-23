@@ -1,9 +1,10 @@
 import "./styles/normalize.css";
 import "./styles/index.css";
-import { getAllProducts, getProductById } from "./requests/products";
+import { getAllProducts, getProductById, productAdd } from "./requests/products";
 import {
   createProductListMarkup,
   createProductMarkup,
+  createNewProductMarkup
 } from "./services/markupService";
 
 // const allProductsList = document.querySelector('#allProducts');
@@ -27,3 +28,21 @@ import {
 //     productBox.innerHTML = createProductMarkup(data);
 //   });
 // }
+
+
+
+// const formNewProduct = document.querySelector('#new-product');
+// const newProductSection = document.querySelector('#newProductSection')
+
+// formNewProduct.addEventListener('submit', onNewProductSubmit);
+
+// function onNewProductSubmit(event) {
+//     event.preventDefault();
+
+//     const title = event.target.elements.title.value.trim();
+
+//     productAdd(title).then(({ data }) => {
+//         newProductSection.innerHTML = createNewProductMarkup(data);
+//     })
+// };
+
